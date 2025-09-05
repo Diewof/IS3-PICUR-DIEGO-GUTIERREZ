@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <title>FURPS - Proyecto</title>
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de ingenieria de software</p> 
+    </div>
+
+    <nav class="main_menu">
+        <ul>
+            <li>
+                <a href="#" onclick="toggleSidebar('analisis')" id = "analisis-btn">Analisis  y Requisitos</a>
+            </li>
+
+            <li>
+                <a href="#" onclick="toggleSidebar('modelado')" id = "modelado-btn">Modelado y Diseño</a>
+            </li>
+
+            <li>
+                <a href="#" onclick="toggleSidebar('calidad')" id = "calidad-btn">Calidad , Prubas y Gestion</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-column" id="sidebar">
+        <div class="sidebar-header">
+            <span id="sidebar-title"></span>
+            <button class="close-sidebar" onclick="closeSidebar()">✕</button>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list" id="sidebar-list">
+                
+            </ul>
+        </div>
+    </div>
+    <div class="overlay" onclick="closeSidebar()"></div>
+    
+    <main class="main-content" id="mainContent">
+        <div class="content-section">
+            <h1>FURPS</h1>
+            <p>El modelo FURPS es un marco de referencia utilizado en ingeniería de software para clasificar y evaluar los requisitos de calidad de un sistema. FURPS es un acrónimo que representa cinco categorías principales de atributos de calidad.</p>
+            
+            <div style="margin: 30px 0; text-align: left;">
+                <h2 style="color: #333; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #4d7894; padding-bottom: 10px;">¿Qué significa FURPS?</h2>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h3 style="color: #4d7894; margin-bottom: 15px;">F - Functionality (Funcionalidad)</h3>
+                    <p style="margin-bottom: 10px; text-align: left; font-size: 16px; line-height: 1.6;">Capacidades del sistema, características, seguridad y funciones generales.</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h3 style="color: #4d7894; margin-bottom: 15px;">U - Usability (Usabilidad)</h3>
+                    <p style="margin-bottom: 10px; text-align: left; font-size: 16px; line-height: 1.6;">Factores humanos, ayuda, documentación y facilidad de uso del sistema.</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h3 style="color: #4d7894; margin-bottom: 15px;">R - Reliability (Confiabilidad)</h3>
+                    <p style="margin-bottom: 10px; text-align: left; font-size: 16px; line-height: 1.6;">Frecuencia de fallos, capacidad de recuperación, predictibilidad y exactitud del sistema.</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h3 style="color: #4d7894; margin-bottom: 15px;">P - Performance (Rendimiento)</h3>
+                    <p style="margin-bottom: 10px; text-align: left; font-size: 16px; line-height: 1.6;">Velocidad de respuesta, rendimiento, uso de recursos, eficiencia y capacidad de carga.</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h3 style="color: #4d7894; margin-bottom: 15px;">S - Supportability (Mantenibilidad)</h3>
+                    <p style="margin-bottom: 10px; text-align: left; font-size: 16px; line-height: 1.6;">Testabilidad, adaptabilidad, mantenibilidad, compatibilidad, configurabilidad, facilidad de instalación y localización.</p>
+                </div>
+            </div>
+            
+            <div style="margin: 40px 0; text-align: center;">
+                <h2 style="color: #333; font-size: 1.8rem; margin-bottom: 20px;">Video Explicativo</h2>
+                <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; background: #f8f9fa; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <iframe 
+                        width="100%" 
+                        height="450" 
+                        src="https://www.youtube.com/embed/TUTivpPSqAc" 
+                        title="Video explicativo sobre FURPS" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        style="border-radius: 10px;">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div style="background: #e7f3ff; padding: 25px; border-radius: 10px; border-left: 5px solid #4d7894; margin-top: 30px;">
+                <h3 style="color: #263b49; margin-bottom: 15px;">Importancia del Modelo FURPS</h3>
+                <p style="text-align: left; font-size: 16px; line-height: 1.6; color: #333;">
+                    El modelo FURPS proporciona un enfoque sistemático para identificar, clasificar y evaluar los requisitos no funcionales de un sistema de software. Esto ayuda a los desarrolladores y stakeholders a tener una visión completa de la calidad esperada del producto final, facilitando la planificación, el diseño y las pruebas del sistema.
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../../JS/script.js"></script>
+    <script>
+        // Auto-abrir el sidebar de calidad al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleSidebar('calidad');
+        });
+    </script>
+</body>
+</html>
