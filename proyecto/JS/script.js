@@ -68,6 +68,8 @@ const sectionData = {
               text: 'Estándares y Modelos de Calidad de Software',
               link: '#EstandarCalidad',
               children: [
+                  { text: 'ISO9000', link: '../HTML/cartelera.html' },
+                { text: 'ISO9000 comic explicativo', link: '../HTML/historieta.html' },
                   { text: 'ISO/IEC 25010', link: '#iso25010' },
                   { text: 'ISO/IEC 12207', link: '#iso12207' },
                   { text: 'ISO/IEC 90003', link: '#iso90003' },
@@ -75,7 +77,7 @@ const sectionData = {
                   { text: 'SPICE', link: '#spice' },
                   { text: 'IEEE 730', link: '#ieee730' },
                   { text: 'Six Sigma', link: '#sixsigma' },
-                  { text: 'FURPS', link: '#furps' },
+                  { text: 'FURPS', link: '../HTML/furps.html' },
                   { text: 'ITIL', link: '#itil' },
                   { text: 'COBIT 9001', link: '#cobit9001' },
                   { text: 'IEEE 1016 (documentación de diseño)', link: '#ieee1016' },
