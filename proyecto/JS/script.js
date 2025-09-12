@@ -68,6 +68,8 @@ const sectionData = {
               text: 'Estándares y Modelos de Calidad de Software',
               link: '#EstandarCalidad',
               children: [
+                  { text: 'ISO9000', link: '../HTML/cartelera.html' },
+                { text: 'ISO9000 comic explicativo', link: '../HTML/historieta.html' },
                   { text: 'ISO/IEC 25010', link: '#iso25010' },
                   { text: 'ISO/IEC 12207', link: '#iso12207' },
                   { text: 'ISO/IEC 90003', link: '#iso90003' },
