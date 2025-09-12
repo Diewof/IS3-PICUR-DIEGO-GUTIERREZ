@@ -75,7 +75,7 @@ const sectionData = {
                   { text: 'SPICE', link: '#spice' },
                   { text: 'IEEE 730', link: '#ieee730' },
                   { text: 'Six Sigma', link: '#sixsigma' },
-                  { text: 'FURPS', link: '#furps' },
+                  { text: 'FURPS', link: '../HTML/furps.html' },
                   { text: 'ITIL', link: '#itil' },
                   { text: 'COBIT 9001', link: '#cobit9001' },
                   { text: 'IEEE 1016 (documentación de diseño)', link: '#ieee1016' },
