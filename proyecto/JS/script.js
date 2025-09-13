@@ -13,8 +13,8 @@ const sectionData = {
               text: 'Requisitos', 
               link: '#requisitos',
               children: [
-                  { text: 'Requisitos de Usuario', link: '#req-usuario' },
-                  { text: 'Requisitos Funcionales', link: '#req-funcionales' },
+                  { text: 'Requisitos de Usuario', link: '../HTML/requsuario.html' },
+                  { text: 'Requisitos Funcionales', link: '../HTML/reqfuncionales.html' },
                   { text: 'Requisitos No Funcionales (RNF)', link: '../HTML/Requisitos.html' },
                   { text: 'Historias de Usuario', link: '../HTML/Historiau.html' },
                   { text: 'Reglas del Negocio', link: '../HTML/ReglasNegocio.html' }
