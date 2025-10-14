@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Ingeniería de Software</title>
+    <link rel="stylesheet" href="../CSS/Gestioncambio.css">
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de ingeniería de software</p>
+    </div>
+
+    <nav class="main_menu">
+        <div><a href="./index.html">Inicio</a></div>
+    </nav>
+
+    <main>
+        <div class="introduccion">
+            <h1>Gestión del Cambio</h1>
+
+            <h2>3.1. Definición del cambio</h2>
+            <p>El cambio es una acción o efecto de modificar, transformar o alterar algo en el sistema de software con la intención de minimizar impactos negativos en calidad, funcionalidad o estabilidad, estos cambios pueden estar en el diseño, código fuente, documentación, requisitos, etc.</p>
+            
+            <p>Los cambios en un sistema de software pueden ser por correcciones de errores (bugs), adicciones de nuevas funcionalidades, mejorar rendimiento, cambio de diseño, adaptaciones de nuevos requisitos del usuario o del negocio, actualizaciones de sistema o tecnologías.</p>
+            
+            <p>Los cambios son inevitables, son procesos constantes y es importante contar con procesos y herramientas para poder gestionar bien estos cambios, teniendo una buena evaluación del cambio, identificando las solicitudes de cambio, planificación y ejecución de los cambios teniendo en cuenta el impacto en costos, tiempos, alcance, calidad, recursos y la prioridad de estos cambios.</p>
+            
+            <p>Los cambios pueden tener impactos significativos en el sistema afectando funcionalidades, estabilidad, seguridad y rendimiento</p>
+
+            <h2>3.2. Matriz de cambios</h2>
+
+            <table class="tabla-cambios">
+                <thead>
+                    <tr>
+                        <th>Cambio</th>
+                        <th>Impacto en Tiempo</th>
+                        <th>Impacto en Costo</th>
+                        <th>Impacto en Alcance</th>
+                        <th>Impacto en Calidad</th>
+                        <th>Impacto en Recursos</th>
+                        <th>Prioridad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Incorporar notificaciones inteligentes en tiempo real para recordar tiempos de adiestramiento y paseo</td>
+                        <td class="impacto-medio">Medio</td>
+                        <td class="impacto-medio">Medio</td>
+                        <td class="impacto-medio">Medio</td>
+                        <td class="impacto-medio">Medio</td>
+                        <td class="impacto-bajo">Bajo</td>
+                        <td class="impacto-medio">Medio</td>
+                    </tr>
+                    <tr>
+                        <td>Sincronización de perfiles que permita compartir la información del perfil de perro</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Procesadores potentes integrando hardware especializado en IA usando Coral TPU para procesar datos en tiempo real</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alta</td>
+                        <td class="impacto-alto">Alto</td>
+                        <td class="impacto-alto">Alto</td>
+                        <td class="impacto-alto">Alto</td>
+                        <td class="impacto-alto">Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Análisis de ladridos y gruñidos mediante una librería más especializada en IA la cual será Pytorch en lugar de librosa</td>
+                        <td class="impacto-bajo">Bajo</td>
+                        <td class="impacto-bajo">Bajo</td>
+                        <td class="impacto-medio">Medio</td>
+                        <td class="impacto-alto">Alto</td>
+                        <td class="impacto-bajo">Bajo</td>
+                        <td class="impacto-medio">Medio</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3.3. Aprobación del cambio</h2>
+
+            <h3>Información del Proyecto</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo">Título del Proyecto</td>
+                    <td>Collar de monitoreo emocional: Hachiko</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Patrocinador del Proyecto</td>
+                    <td>Juan Diego Gutierrez Otalvaro / Valeria Suarez</td>
+                </tr>
+            </table>
+
+            <h3>Solicitud de Cambio</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo">Nombre del Originador</td>
+                    <td>Juan Diego Gutierrez Otalvaro / Valeria Suarez</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Fecha de Solicitud</td>
+                    <td>16/03/2025</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Información de Contacto</td>
+                    <td>+57 3023417958</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Número de Identificación</td>
+                    <td><span class="cambio-id">C-001, C-002, C-003, C-004</span></td>
+                </tr>
+            </table>
+
+            <h3>Elementos a Cambiar</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-001</span></td>
+                    <td>Sistema de notificación avanzado para adiestramiento y paseos</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-002</span></td>
+                    <td>Sistema de acceso compartido para múltiples propietarios</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-003</span></td>
+                    <td>Procesadores especializados para IA</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-004</span></td>
+                    <td>Cambio de librería para análisis del audio</td>
+                </tr>
+            </table>
+
+            <h3>Descripción del Cambio</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-001</span></td>
+                    <td>Incorporar alertas automáticas para horarios de paseo, entrenamiento y estados emocionales</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-002</span></td>
+                    <td>Permitir que varios usuarios gestionen la misma cuenta del perro en la aplicación</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-003</span></td>
+                    <td>Implementar hardware potente para procesamiento en tiempo real de datos emocionales</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo"><span class="cambio-id">C-004</span></td>
+                    <td>Análisis de ladridos y gruñidos mediante una librería más especializada en IA la cual será Pytorch en lugar de librosa</td>
+                </tr>
+            </table>
+
+            <h3>Impacto Estimado</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <th>Cambio</th>
+                    <th>Impacto Financiero</th>
+                    <th>Impacto en Cronograma</th>
+                    <th>Prioridad</th>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-001</td>
+                    <td class="impacto-medio">Medio</td>
+                    <td class="impacto-medio">Medio</td>
+                    <td class="impacto-medio">Medio</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-002</td>
+                    <td class="impacto-alto">Alto</td>
+                    <td class="impacto-alto">Alto</td>
+                    <td class="impacto-alto">Alto</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-003</td>
+                    <td class="impacto-alto">Alto</td>
+                    <td class="impacto-alto">Alto</td>
+                    <td class="impacto-alto">Alto</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-004</td>
+                    <td class="impacto-bajo">Bajo</td>
+                    <td class="impacto-bajo">Bajo</td>
+                    <td class="impacto-medio">Medio</td>
+                </tr>
+            </table>
+
+            <h3>Evaluación del Cambio</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo">Fecha de Evaluación</td>
+                    <td>20/03/2025</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Nombre del Evaluador</td>
+                    <td>Juan Diego Gutierrez Otalvaro</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Firma del Evaluador</td>
+                    <td>Diego G.</td>
+                </tr>
+            </table>
+
+            <h3>Aspectos Afectados y Trabajo Requerido</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <th>Cambio</th>
+                    <th>Aspectos Afectados</th>
+                    <th>Trabajo Requerido</th>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-001</td>
+                    <td>Interfaz UI<br>Sistema de notificaciones</td>
+                    <td>Integración del software existente con sensores y notificaciones push para paseos y sesiones de adiestramiento</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-002</td>
+                    <td>Base de datos de usuarios y permisos<br>Interfaz de usuario adaptada para manejar el acceso entre usuarios</td>
+                    <td>Desarrollo de las funciones existentes que permiten al acceso e interacción multiusuario</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-003</td>
+                    <td>Integración del hardware existente de los procesadores con los algoritmos y demás hardware como batería, sensores y controladores</td>
+                    <td>Integrar coral TPU asegurando que optimice los algoritmos de IA y la adaptación energética del producto</td>
+                </tr>
+                <tr>
+                    <td class="cambio-id">C-004</td>
+                    <td>Influye en el rendimiento de la precisión de los algoritmos de análisis de audio<br>Afecta las dependencias de software</td>
+                    <td>Reemplazar la librería encargada del análisis y procesamiento del audio en las secciones del código que lo impliquen usando la librería Pytorch</td>
+                </tr>
+            </table>
+
+            <h3>Aprobación de Cambios</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo">Estado</td>
+                    <td><strong>ACEPTADO</strong></td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Fecha de Aprobación</td>
+                    <td>21/03/2025</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Aprobado por</td>
+                    <td>Valeria Suarez Mejia</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Firma</td>
+                    <td>Vale M.</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Comentarios</td>
+                    <td>Requiere validación de compatibilidad del cambio con ID de C-002 con C-004</td>
+                </tr>
+            </table>
+
+            <h3>Implementación del Cambio</h3>
+            <table class="tabla-solicitud">
+                <tr>
+                    <td class="campo-titulo">Activo</td>
+                    <td><strong>Sí</strong></td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Implementador</td>
+                    <td>Juan Diego Gutierrez Otalvaro</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Fecha de Ejecución</td>
+                    <td>26/02/2025</td>
+                </tr>
+                <tr>
+                    <td class="campo-titulo">Firma</td>
+                    <td>Diego G</td>
+                </tr>
+            </table>
+
+            <h2>3.6. Solicitud del cambio</h2>
+
+            <table class="tabla-cambios">
+                <thead>
+                    <tr>
+                        <th>ID Cambio</th>
+                        <th>Fecha Solicitud</th>
+                        <th>Historia Afectada</th>
+                        <th>Motivo del Cambio</th>
+                        <th>Archivos Impactados</th>
+                        <th>Tiempo Estimado (h)</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-001</td>
+                        <td>16/04/2025</td>
+                        <td>HU07</td>
+                        <td>Historia aplicada exitosamente mediante un indicador visual que enmascara la contraseña</td>
+                        <td>login-register.php, ui.js</td>
+                        <td>1</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-002</td>
+                        <td>16/04/2025</td>
+                        <td>HU10</td>
+                        <td>Historia aplicada mediante un icono de sol y luna para cambiar entre temas</td>
+                        <td>login-register.php, ui.js, recuperar-password.php, main.php</td>
+                        <td>2</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-003</td>
+                        <td>16/04/2025</td>
+                        <td>HU03</td>
+                        <td>La historia se aplicará solamente de manera visual debido a dependencias con api</td>
+                        <td>authmodel.php, authcontroller.php, login-registro.php</td>
+                        <td>1</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-004</td>
+                        <td>17/04/2025</td>
+                        <td>HU01</td>
+                        <td>Historia aplicada mediante RegEx y validaciones visuales para el usuario</td>
+                        <td>ui.js</td>
+                        <td>3</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-005</td>
+                        <td>17/04/2025</td>
+                        <td>HU05</td>
+                        <td>Historia aplicada mediante RegEx y eventlisteners</td>
+                        <td>ui.js</td>
+                        <td>2</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-006</td>
+                        <td>18/04/2025</td>
+                        <td>HU06</td>
+                        <td>Historia aplicada mediante controladores de cerrar sesion y main.js</td>
+                        <td>main.css, main.php, main.js, autolog_outcontroller.php, logout_controller</td>
+                        <td>2</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-007</td>
+                        <td>19/04/2025</td>
+                        <td>HU04</td>
+                        <td>Bloqueo de sesion local mediante IP sin notificación por correo</td>
+                        <td>login-registro.php, authcontroller.php, authmodel.php</td>
+                        <td>2</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-008</td>
+                        <td>20/04/2025</td>
+                        <td>HU09</td>
+                        <td>Barra de búsqueda implementada en el menú principal</td>
+                        <td>main.php, Main.css, search.js</td>
+                        <td>1</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-009</td>
+                        <td>20/04/2025</td>
+                        <td>HU08</td>
+                        <td>Función existente por defecto en los navegadores con la combinación ctrl+f</td>
+                        <td>No aplica</td>
+                        <td>0</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-010</td>
+                        <td>30/04/2025</td>
+                        <td>HU02</td>
+                        <td>Añadida nueva tabla llamada usuario para gestionar permisos por rol</td>
+                        <td>base de datos, main.php, admin.php, authcontroller.php, authmodel.php</td>
+                        <td>3</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                    <tr>
+                        <td class="cambio-id">CAMBIO-011</td>
+                        <td>11/05/2025</td>
+                        <td>N/A</td>
+                        <td>Añadida tabla intermedia para garantizar estabilidad en registro Sensores</td>
+                        <td>base de datos, controladores de las tablas transaccionales y relacionales</td>
+                        <td>6</td>
+                        <td class="impacto-medio">En espera</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 30px; font-style: italic; text-align: center;"><strong>Fuentes:</strong> Elaboración propia</p>
+        </div>
+    </main>
+</body>
+</html>

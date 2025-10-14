@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos Funcionales</title>
+    <link rel="stylesheet" href="../CSS/Requisitos.css">
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de ingeniería de software</p>
+    </div>
+
+    <nav class="main_menu">
+        <div><a href="./index.html">Inicio</a></div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Requisitos Funcionales</h2>
+        <p class="section-subtitle">
+            Los Requisitos Funcionales (RF) definen las funciones, procesos y servicios que el sistema debe 
+            proporcionar a los usuarios. Es decir, describen las operaciones específicas que el software debe realizar.
+        </p>
+
+        <div class="definition-section">
+            <h3 class="definition-title">Definición de Requisitos Funcionales</h3>
+            <p class="definition-text">
+                Según la ingeniería de software, los Requisitos Funcionales son aquellos que especifican 
+                las <strong>acciones, tareas o procesos</strong> que el sistema debe ejecutar para cumplir 
+                con las necesidades del usuario o negocio. Estos requisitos incluyen la interacción con los 
+                datos, el procesamiento de la información y la respuesta esperada del sistema ante entradas concretas.
+            </p>
+        </div>
+
+        <div id="tabla-rf" class="definition-section">
+            <h3 class="definition-title">Listado de Requisitos Funcionales</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción</th>
+                            <th>Usuario</th>
+                            <th>Requisito de Usuario Relacionado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<tr>
+        <td><span class="rule-id">RF-001</span></td>
+        <td>Crear Propietario</td>
+        <td>Permite registrar la información del Propietario con los siguientes datos: Nombre, teléfono, dirección, edad a través de la opción guardar.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-002</span></td>
+        <td>Modificar Propietario</td>
+        <td>Permite modificar la información de Propietario a excepción del ID utilizando la opción guardar.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-003</span></td>
+        <td>Guardar Propietario</td>
+        <td>Permite guardar los campos de Propietario</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-004</span></td>
+        <td>Consultar Propietario</td>
+        <td>Permite consultar la información de Propietario por los campos Nombre, teléfono, dirección, edad.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-005</span></td>
+        <td>Inhabilitar Propietario</td>
+        <td>Permite habilitar o inhabilitar un/a Propietario, con previa confirmación de realizar el proceso y verificación de información dependiente</td>
+        <td>Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-006</span></td>
+        <td>Cancelar Propietario</td>
+        <td>Permite cancelar el proceso que se esté realizando y regresar al estado inicial.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-007</span></td>
+        <td>Salir Propietario</td>
+        <td>Permite cerrar el formulario.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-008</span></td>
+        <td>Crear Residencia</td>
+        <td>Permite registrar la información de Residencia con los siguientes datos: Ciudad, departamento, municipio, barrio a través de la opción guardar.</td>
+        <td>Propietario, Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-009</span></td>
+        <td>Nombre Requisito 9</td>
+        <td>Descripción detallada del requisito funcional número 9.</td>
+        <td>Administrador</td>
+        <td>RU-001</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-010</span></td>
+        <td>Nombre Requisito 10</td>
+        <td>Descripción detallada del requisito funcional número 10.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-011</span></td>
+        <td>Nombre Requisito 11</td>
+        <td>Descripción detallada del requisito funcional número 11.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-012</span></td>
+        <td>Nombre Requisito 12</td>
+        <td>Descripción detallada del requisito funcional número 12.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-013</span></td>
+        <td>Nombre Requisito 13</td>
+        <td>Descripción detallada del requisito funcional número 13.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-014</span></td>
+        <td>Nombre Requisito 14</td>
+        <td>Descripción detallada del requisito funcional número 14.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-015</span></td>
+        <td>Nombre Requisito 15</td>
+        <td>Descripción detallada del requisito funcional número 15.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-016</span></td>
+        <td>Nombre Requisito 16</td>
+        <td>Descripción detallada del requisito funcional número 16.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-017</span></td>
+        <td>Nombre Requisito 17</td>
+        <td>Descripción detallada del requisito funcional número 17.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-018</span></td>
+        <td>Nombre Requisito 18</td>
+        <td>Descripción detallada del requisito funcional número 18.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-019</span></td>
+        <td>Nombre Requisito 19</td>
+        <td>Descripción detallada del requisito funcional número 19.</td>
+        <td>Administrador</td>
+        <td>RU-002</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-020</span></td>
+        <td>Nombre Requisito 20</td>
+        <td>Descripción detallada del requisito funcional número 20.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-021</span></td>
+        <td>Nombre Requisito 21</td>
+        <td>Descripción detallada del requisito funcional número 21.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-022</span></td>
+        <td>Nombre Requisito 22</td>
+        <td>Descripción detallada del requisito funcional número 22.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-023</span></td>
+        <td>Nombre Requisito 23</td>
+        <td>Descripción detallada del requisito funcional número 23.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-024</span></td>
+        <td>Nombre Requisito 24</td>
+        <td>Descripción detallada del requisito funcional número 24.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-025</span></td>
+        <td>Nombre Requisito 25</td>
+        <td>Descripción detallada del requisito funcional número 25.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-026</span></td>
+        <td>Nombre Requisito 26</td>
+        <td>Descripción detallada del requisito funcional número 26.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-027</span></td>
+        <td>Nombre Requisito 27</td>
+        <td>Descripción detallada del requisito funcional número 27.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-028</span></td>
+        <td>Nombre Requisito 28</td>
+        <td>Descripción detallada del requisito funcional número 28.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-029</span></td>
+        <td>Nombre Requisito 29</td>
+        <td>Descripción detallada del requisito funcional número 29.</td>
+        <td>Administrador</td>
+        <td>RU-003</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-030</span></td>
+        <td>Nombre Requisito 30</td>
+        <td>Descripción detallada del requisito funcional número 30.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-031</span></td>
+        <td>Nombre Requisito 31</td>
+        <td>Descripción detallada del requisito funcional número 31.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-032</span></td>
+        <td>Nombre Requisito 32</td>
+        <td>Descripción detallada del requisito funcional número 32.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-033</span></td>
+        <td>Nombre Requisito 33</td>
+        <td>Descripción detallada del requisito funcional número 33.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-034</span></td>
+        <td>Nombre Requisito 34</td>
+        <td>Descripción detallada del requisito funcional número 34.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-035</span></td>
+        <td>Nombre Requisito 35</td>
+        <td>Descripción detallada del requisito funcional número 35.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-036</span></td>
+        <td>Nombre Requisito 36</td>
+        <td>Descripción detallada del requisito funcional número 36.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-037</span></td>
+        <td>Nombre Requisito 37</td>
+        <td>Descripción detallada del requisito funcional número 37.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-038</span></td>
+        <td>Nombre Requisito 38</td>
+        <td>Descripción detallada del requisito funcional número 38.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-039</span></td>
+        <td>Nombre Requisito 39</td>
+        <td>Descripción detallada del requisito funcional número 39.</td>
+        <td>Administrador</td>
+        <td>RU-004</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-040</span></td>
+        <td>Nombre Requisito 40</td>
+        <td>Descripción detallada del requisito funcional número 40.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-041</span></td>
+        <td>Nombre Requisito 41</td>
+        <td>Descripción detallada del requisito funcional número 41.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-042</span></td>
+        <td>Nombre Requisito 42</td>
+        <td>Descripción detallada del requisito funcional número 42.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-043</span></td>
+        <td>Nombre Requisito 43</td>
+        <td>Descripción detallada del requisito funcional número 43.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-044</span></td>
+        <td>Nombre Requisito 44</td>
+        <td>Descripción detallada del requisito funcional número 44.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-045</span></td>
+        <td>Nombre Requisito 45</td>
+        <td>Descripción detallada del requisito funcional número 45.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-046</span></td>
+        <td>Nombre Requisito 46</td>
+        <td>Descripción detallada del requisito funcional número 46.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-047</span></td>
+        <td>Nombre Requisito 47</td>
+        <td>Descripción detallada del requisito funcional número 47.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-048</span></td>
+        <td>Nombre Requisito 48</td>
+        <td>Descripción detallada del requisito funcional número 48.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-049</span></td>
+        <td>Nombre Requisito 49</td>
+        <td>Descripción detallada del requisito funcional número 49.</td>
+        <td>Administrador</td>
+        <td>RU-005</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-050</span></td>
+        <td>Nombre Requisito 50</td>
+        <td>Descripción detallada del requisito funcional número 50.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-051</span></td>
+        <td>Nombre Requisito 51</td>
+        <td>Descripción detallada del requisito funcional número 51.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-052</span></td>
+        <td>Nombre Requisito 52</td>
+        <td>Descripción detallada del requisito funcional número 52.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-053</span></td>
+        <td>Nombre Requisito 53</td>
+        <td>Descripción detallada del requisito funcional número 53.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-054</span></td>
+        <td>Nombre Requisito 54</td>
+        <td>Descripción detallada del requisito funcional número 54.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-055</span></td>
+        <td>Nombre Requisito 55</td>
+        <td>Descripción detallada del requisito funcional número 55.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-056</span></td>
+        <td>Nombre Requisito 56</td>
+        <td>Descripción detallada del requisito funcional número 56.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-057</span></td>
+        <td>Nombre Requisito 57</td>
+        <td>Descripción detallada del requisito funcional número 57.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-058</span></td>
+        <td>Nombre Requisito 58</td>
+        <td>Descripción detallada del requisito funcional número 58.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-059</span></td>
+        <td>Nombre Requisito 59</td>
+        <td>Descripción detallada del requisito funcional número 59.</td>
+        <td>Administrador</td>
+        <td>RU-006</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-060</span></td>
+        <td>Nombre Requisito 60</td>
+        <td>Descripción detallada del requisito funcional número 60.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-061</span></td>
+        <td>Nombre Requisito 61</td>
+        <td>Descripción detallada del requisito funcional número 61.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-062</span></td>
+        <td>Nombre Requisito 62</td>
+        <td>Descripción detallada del requisito funcional número 62.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-063</span></td>
+        <td>Nombre Requisito 63</td>
+        <td>Descripción detallada del requisito funcional número 63.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-064</span></td>
+        <td>Nombre Requisito 64</td>
+        <td>Descripción detallada del requisito funcional número 64.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-065</span></td>
+        <td>Nombre Requisito 65</td>
+        <td>Descripción detallada del requisito funcional número 65.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-066</span></td>
+        <td>Nombre Requisito 66</td>
+        <td>Descripción detallada del requisito funcional número 66.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-067</span></td>
+        <td>Nombre Requisito 67</td>
+        <td>Descripción detallada del requisito funcional número 67.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-068</span></td>
+        <td>Nombre Requisito 68</td>
+        <td>Descripción detallada del requisito funcional número 68.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-069</span></td>
+        <td>Nombre Requisito 69</td>
+        <td>Descripción detallada del requisito funcional número 69.</td>
+        <td>Administrador</td>
+        <td>RU-007</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-070</span></td>
+        <td>Nombre Requisito 70</td>
+        <td>Descripción detallada del requisito funcional número 70.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-071</span></td>
+        <td>Nombre Requisito 71</td>
+        <td>Descripción detallada del requisito funcional número 71.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-072</span></td>
+        <td>Nombre Requisito 72</td>
+        <td>Descripción detallada del requisito funcional número 72.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-073</span></td>
+        <td>Nombre Requisito 73</td>
+        <td>Descripción detallada del requisito funcional número 73.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-074</span></td>
+        <td>Nombre Requisito 74</td>
+        <td>Descripción detallada del requisito funcional número 74.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-075</span></td>
+        <td>Nombre Requisito 75</td>
+        <td>Descripción detallada del requisito funcional número 75.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-076</span></td>
+        <td>Nombre Requisito 76</td>
+        <td>Descripción detallada del requisito funcional número 76.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-077</span></td>
+        <td>Nombre Requisito 77</td>
+        <td>Descripción detallada del requisito funcional número 77.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-078</span></td>
+        <td>Nombre Requisito 78</td>
+        <td>Descripción detallada del requisito funcional número 78.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-079</span></td>
+        <td>Nombre Requisito 79</td>
+        <td>Descripción detallada del requisito funcional número 79.</td>
+        <td>Administrador</td>
+        <td>RU-008</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-080</span></td>
+        <td>Nombre Requisito 80</td>
+        <td>Descripción detallada del requisito funcional número 80.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-081</span></td>
+        <td>Nombre Requisito 81</td>
+        <td>Descripción detallada del requisito funcional número 81.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-082</span></td>
+        <td>Nombre Requisito 82</td>
+        <td>Descripción detallada del requisito funcional número 82.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-083</span></td>
+        <td>Nombre Requisito 83</td>
+        <td>Descripción detallada del requisito funcional número 83.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-084</span></td>
+        <td>Nombre Requisito 84</td>
+        <td>Descripción detallada del requisito funcional número 84.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-085</span></td>
+        <td>Nombre Requisito 85</td>
+        <td>Descripción detallada del requisito funcional número 85.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-086</span></td>
+        <td>Nombre Requisito 86</td>
+        <td>Descripción detallada del requisito funcional número 86.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-087</span></td>
+        <td>Nombre Requisito 87</td>
+        <td>Descripción detallada del requisito funcional número 87.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-088</span></td>
+        <td>Nombre Requisito 88</td>
+        <td>Descripción detallada del requisito funcional número 88.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-089</span></td>
+        <td>Nombre Requisito 89</td>
+        <td>Descripción detallada del requisito funcional número 89.</td>
+        <td>Administrador</td>
+        <td>RU-009</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-090</span></td>
+        <td>Nombre Requisito 90</td>
+        <td>Descripción detallada del requisito funcional número 90.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-091</span></td>
+        <td>Nombre Requisito 91</td>
+        <td>Descripción detallada del requisito funcional número 91.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-092</span></td>
+        <td>Nombre Requisito 92</td>
+        <td>Descripción detallada del requisito funcional número 92.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-093</span></td>
+        <td>Nombre Requisito 93</td>
+        <td>Descripción detallada del requisito funcional número 93.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-094</span></td>
+        <td>Nombre Requisito 94</td>
+        <td>Descripción detallada del requisito funcional número 94.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-095</span></td>
+        <td>Nombre Requisito 95</td>
+        <td>Descripción detallada del requisito funcional número 95.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-096</span></td>
+        <td>Nombre Requisito 96</td>
+        <td>Descripción detallada del requisito funcional número 96.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-097</span></td>
+        <td>Nombre Requisito 97</td>
+        <td>Descripción detallada del requisito funcional número 97.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-098</span></td>
+        <td>Nombre Requisito 98</td>
+        <td>Descripción detallada del requisito funcional número 98.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-099</span></td>
+        <td>Nombre Requisito 99</td>
+        <td>Descripción detallada del requisito funcional número 99.</td>
+        <td>Administrador</td>
+        <td>RU-010</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-100</span></td>
+        <td>Nombre Requisito 100</td>
+        <td>Descripción detallada del requisito funcional número 100.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-101</span></td>
+        <td>Nombre Requisito 101</td>
+        <td>Descripción detallada del requisito funcional número 101.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-102</span></td>
+        <td>Nombre Requisito 102</td>
+        <td>Descripción detallada del requisito funcional número 102.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-103</span></td>
+        <td>Nombre Requisito 103</td>
+        <td>Descripción detallada del requisito funcional número 103.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-104</span></td>
+        <td>Nombre Requisito 104</td>
+        <td>Descripción detallada del requisito funcional número 104.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-105</span></td>
+        <td>Nombre Requisito 105</td>
+        <td>Descripción detallada del requisito funcional número 105.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-106</span></td>
+        <td>Nombre Requisito 106</td>
+        <td>Descripción detallada del requisito funcional número 106.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-107</span></td>
+        <td>Nombre Requisito 107</td>
+        <td>Descripción detallada del requisito funcional número 107.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-108</span></td>
+        <td>Nombre Requisito 108</td>
+        <td>Descripción detallada del requisito funcional número 108.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-109</span></td>
+        <td>Nombre Requisito 109</td>
+        <td>Descripción detallada del requisito funcional número 109.</td>
+        <td>Administrador</td>
+        <td>RU-011</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-110</span></td>
+        <td>Nombre Requisito 110</td>
+        <td>Descripción detallada del requisito funcional número 110.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-111</span></td>
+        <td>Nombre Requisito 111</td>
+        <td>Descripción detallada del requisito funcional número 111.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-112</span></td>
+        <td>Nombre Requisito 112</td>
+        <td>Descripción detallada del requisito funcional número 112.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-113</span></td>
+        <td>Nombre Requisito 113</td>
+        <td>Descripción detallada del requisito funcional número 113.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-114</span></td>
+        <td>Nombre Requisito 114</td>
+        <td>Descripción detallada del requisito funcional número 114.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-115</span></td>
+        <td>Nombre Requisito 115</td>
+        <td>Descripción detallada del requisito funcional número 115.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-116</span></td>
+        <td>Nombre Requisito 116</td>
+        <td>Descripción detallada del requisito funcional número 116.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-117</span></td>
+        <td>Nombre Requisito 117</td>
+        <td>Descripción detallada del requisito funcional número 117.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-118</span></td>
+        <td>Nombre Requisito 118</td>
+        <td>Descripción detallada del requisito funcional número 118.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-119</span></td>
+        <td>Nombre Requisito 119</td>
+        <td>Descripción detallada del requisito funcional número 119.</td>
+        <td>Administrador</td>
+        <td>RU-012</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-120</span></td>
+        <td>Nombre Requisito 120</td>
+        <td>Descripción detallada del requisito funcional número 120.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-121</span></td>
+        <td>Nombre Requisito 121</td>
+        <td>Descripción detallada del requisito funcional número 121.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-122</span></td>
+        <td>Nombre Requisito 122</td>
+        <td>Descripción detallada del requisito funcional número 122.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-123</span></td>
+        <td>Nombre Requisito 123</td>
+        <td>Descripción detallada del requisito funcional número 123.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-124</span></td>
+        <td>Nombre Requisito 124</td>
+        <td>Descripción detallada del requisito funcional número 124.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-125</span></td>
+        <td>Nombre Requisito 125</td>
+        <td>Descripción detallada del requisito funcional número 125.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-126</span></td>
+        <td>Nombre Requisito 126</td>
+        <td>Descripción detallada del requisito funcional número 126.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-127</span></td>
+        <td>Nombre Requisito 127</td>
+        <td>Descripción detallada del requisito funcional número 127.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-128</span></td>
+        <td>Nombre Requisito 128</td>
+        <td>Descripción detallada del requisito funcional número 128.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-129</span></td>
+        <td>Nombre Requisito 129</td>
+        <td>Descripción detallada del requisito funcional número 129.</td>
+        <td>Administrador</td>
+        <td>RU-013</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-130</span></td>
+        <td>Nombre Requisito 130</td>
+        <td>Descripción detallada del requisito funcional número 130.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-131</span></td>
+        <td>Nombre Requisito 131</td>
+        <td>Descripción detallada del requisito funcional número 131.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-132</span></td>
+        <td>Nombre Requisito 132</td>
+        <td>Descripción detallada del requisito funcional número 132.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-133</span></td>
+        <td>Nombre Requisito 133</td>
+        <td>Descripción detallada del requisito funcional número 133.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-134</span></td>
+        <td>Nombre Requisito 134</td>
+        <td>Descripción detallada del requisito funcional número 134.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-135</span></td>
+        <td>Nombre Requisito 135</td>
+        <td>Descripción detallada del requisito funcional número 135.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-136</span></td>
+        <td>Nombre Requisito 136</td>
+        <td>Descripción detallada del requisito funcional número 136.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-137</span></td>
+        <td>Nombre Requisito 137</td>
+        <td>Descripción detallada del requisito funcional número 137.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-138</span></td>
+        <td>Nombre Requisito 138</td>
+        <td>Descripción detallada del requisito funcional número 138.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+<tr>
+        <td><span class="rule-id">RF-139</span></td>
+        <td>Nombre Requisito 139</td>
+        <td>Descripción detallada del requisito funcional número 139.</td>
+        <td>Administrador</td>
+        <td>RU-014</td>
+    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

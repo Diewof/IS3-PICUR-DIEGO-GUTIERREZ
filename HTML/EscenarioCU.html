@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto de Ingeniería de Software</title>
+  <link rel="stylesheet" href="../CSS/EscenarioCU.css">
+</head>
+<body>
+
+  <div class="top-header">
+    <p>Proyecto de ingeniería de software</p>
+  </div>
+
+
+  <nav class="main_menu">
+    <div><a href="./index.html">Inicio</a></div>
+  </nav>
+
+  <main>
+    <div class="introduccion">
+      <h1>Escenarios de caso de uso</h1>
+
+      <p>
+        Según Metaute (2016) los casos de uso representan el sistema desde la perspectiva del usuario 
+        y deben cumplir varios objetivos: definir los requisitos funcionales y operativos del producto 
+        a través de un escenario acordado entre el usuario final y el equipo de desarrollo, ofrecer una 
+        descripción clara de la interacción entre el usuario y el sistema, y servir como base para la 
+        validación de pruebas.
+      </p>
+
+
+      <table class="tabla-escenarios">
+        <thead>
+          <tr>
+            <th>Caso de uso</th>
+            <th>Actor</th>
+            <th>Descripción</th>
+            <th>Flujo principal</th>
+            <th>Flujo alternativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salir</td>
+            <td>Usuario</td>
+            <td>El usuario cierra sesión en el sistema.</td>
+            <td>
+              1. Usuario selecciona "Salir".<br>
+              2. El sistema cierra sesión.<br>
+              3. Se redirige al login.
+            </td>
+            <td>El usuario cancela la acción y permanece en la aplicación.</td>
+          </tr>
+          <tr>
+            <td>Cancelar</td>
+            <td>Usuario</td>
+            <td>Permite abandonar una operación en curso.</td>
+            <td>
+              1. Usuario presiona "Cancelar".<br>
+              2. El sistema anula la acción.<br>
+              3. Regresa a la pantalla anterior.
+            </td>
+            <td>El usuario decide continuar sin cancelar.</td>
+          </tr>
+          <tr>
+            <td>Crear</td>
+            <td>Usuario</td>
+            <td>Registrar nuevos datos en el sistema.</td>
+            <td>
+              1. Usuario selecciona "Crear".<br>
+              2. El sistema muestra formulario vacío.<br>
+              3. Usuario llena datos.<br>
+              4. El sistema guarda la información.
+            </td>
+            <td>Si hay datos inválidos, se muestra un mensaje de error.</td>
+          </tr>
+          <tr>
+            <td>Modificar</td>
+            <td>Usuario</td>
+            <td>Permite actualizar información ya registrada.</td>
+            <td>
+              1. Usuario selecciona "Modificar".<br>
+              2. Sistema muestra datos existentes.<br>
+              3. Usuario edita campos.<br>
+              4. Sistema guarda cambios.
+            </td>
+            <td>Si los cambios son inválidos, se cancela la modificación.</td>
+          </tr>
+          <tr>
+            <td>Consultar</td>
+            <td>Usuario</td>
+            <td>Permite visualizar datos almacenados.</td>
+            <td>
+              1. Usuario selecciona "Consultar".<br>
+              2. El sistema muestra la información disponible.
+            </td>
+            <td>Si no hay registros, se muestra mensaje "No existen datos".</td>
+          </tr>
+          <tr>
+            <td>Inhabilitar</td>
+            <td>Administrador</td>
+            <td>Desactiva un registro sin eliminarlo del sistema.</td>
+            <td>
+              1. Administrador selecciona "Inhabilitar".<br>
+              2. Sistema cambia estado del registro.<br>
+              3. El registro no aparece en las consultas activas.
+            </td>
+            <td>Si el registro no existe, se muestra un mensaje de error.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

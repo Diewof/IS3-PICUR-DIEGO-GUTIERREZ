@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE 730 - Aseguramiento de Calidad de Software</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e8 100%);
+            color: rgb(44, 44, 43);
+            overflow-x: hidden;
+        }
+
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #13ac02, #0f8c01);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1003;
+            text-transform: uppercase;
+            box-shadow: 0 2px 15px rgba(19, 172, 2, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .main_menu {
+            position: fixed;
+            top: 52px;
+            right: 0;
+            left: 0;
+            z-index: 1002;
+            background-color: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main_menu a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 20px 20px;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main_menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(19, 172, 2, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .main_menu a:hover::before {
+            left: 100%;
+        }
+
+        .main_menu a:hover {
+            background-color: rgba(19, 172, 2, 0.2);
+            border-bottom: 3px solid #13ac02;
+            transform: translateY(-1px);
+            color: #13ac02;
+        }
+
+        .container {
+            background: rgba(199, 231, 180, 0.9);
+            backdrop-filter: blur(10px);
+            margin-top: 112px;
+            margin-left: 5%;
+            margin-right: 5%;
+            min-height: calc(100vh - 112px);
+            padding: 40px;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .main-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .ieee-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #13ac02, #0f8c01);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 20px auto;
+            display: block;
+            width: fit-content;
+            box-shadow: 0 5px 15px rgba(19, 172, 2, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #13ac02;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #13ac02, #0f8c01);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d5a2d;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .definition-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid #13ac02;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .definition-title {
+            color: #2d5a2d;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .definition-text {
+            color: rgb(44, 44, 43);
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .processes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .process-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(19, 172, 2, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .process-card:hover::before {
+            opacity: 1;
+        }
+
+        .process-card:nth-child(1) { border-top-color: #3498db; }
+        .process-card:nth-child(2) { border-top-color: #e74c3c; }
+        .process-card:nth-child(3) { border-top-color: #f39c12; }
+        .process-card:nth-child(4) { border-top-color: #9b59b6; }
+        .process-card:nth-child(5) { border-top-color: #1abc9c; }
+        .process-card:nth-child(6) { border-top-color: #e67e22; }
+
+        .process-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .process-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d5a2d;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .process-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .benefits-list li {
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 10px;
+            border-left: 5px solid #13ac02;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #13ac02;
+            font-weight: bold;
+        }
+
+        .benefits-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(19, 172, 2, 0.2);
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            margin: 25px 0;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 14px;
+        }
+
+        .info-table thead {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
+
+        .info-table th {
+            padding: 18px 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 13px;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 15px;
+            vertical-align: top;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .info-table tbody tr:hover {
+            background-color: rgba(177, 214, 186, 0.3);
+        }
+
+        .quiz-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .quiz-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        .quiz-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .quiz-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .quiz-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .quiz-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .quiz-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .quiz-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .quiz-button:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        }
+
+        .quiz-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .implementation-steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .implementation-steps li {
+            counter-increment: step-counter;
+            padding: 25px;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-left: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .implementation-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #13ac02, #0f8c01);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(19, 172, 2, 0.3);
+        }
+
+        .implementation-steps li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(255, 193, 7, 0.2);
+        }
+
+        .highlight-box-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #856404;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-left: 2%;
+                margin-right: 2%;
+                padding: 20px;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .processes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-title {
+                font-size: 1.8rem;
+            }
+
+            .quiz-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de Ingeniería de Software - Hachiko</p>
+    </div>
+
+    <nav class="main_menu">
+        <div><a href="./index.html">Inicio</a></div>
+    </nav>
+
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">IEEE 730-2014</h1>
+                <p class="main-subtitle">Standard for Software Quality Assurance Processes</p>
+                <div class="ieee-badge">Estándar Internacional de Calidad</div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: INTRODUCCIÓN -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 1</span>
+                <h2 class="section-title">¿Qué es IEEE 730?</h2>
+            </div>
+            
+            <p class="section-description">
+                IEEE 730 es el estándar internacional que establece los requisitos mínimos para procesos de 
+                aseguramiento de calidad de software (SQA - Software Quality Assurance). Publicado por el 
+                Instituto de Ingenieros Eléctricos y Electrónicos (IEEE), este estándar proporciona un marco 
+                de trabajo sistemático y estructurado para garantizar que los productos de software cumplan 
+                con los requisitos especificados y mantengan altos niveles de calidad a lo largo de todo el 
+                ciclo de vida del desarrollo.
+            </p>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Objetivo Principal</h3>
+                <p class="definition-text">
+                    El objetivo fundamental de IEEE 730 es establecer requisitos uniformes para los procesos de 
+                    SQA, proporcionando un conjunto de actividades planificadas y sistemáticas que aseguren que 
+                    los productos y procesos de software cumplan con los requisitos establecidos. Este estándar 
+                    se aplica al desarrollo, operación y mantenimiento de sistemas de software críticos y no críticos.
+                </p>
+            </div>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Alcance del Estándar</h3>
+                <p class="definition-text">
+                    IEEE 730-2014 se aplica a cualquier organización que desarrolle, adquiera, opere o mantenga 
+                    software. El estándar es independiente de la tecnología, metodología de desarrollo, modelos 
+                    de ciclo de vida, técnicas de desarrollo y métodos de aseguramiento de la calidad específicos. 
+                    Esto significa que puede ser implementado en entornos ágiles, en cascada, DevOps, o cualquier 
+                    otra metodología de desarrollo de software.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">⚡ Dato Importante</div>
+                <p>La versión actual IEEE 730-2014 reemplazó a IEEE 730-2002 y representa una actualización 
+                significativa que armoniza el estándar con ISO/IEC/IEEE 12207 (Software Life Cycle Processes) 
+                e ISO/IEC/IEEE 15288 (System Life Cycle Processes), proporcionando una mayor integración con 
+                otros estándares internacionales de ingeniería de sistemas y software.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: COMPONENTES CLAVE -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 2</span>
+                <h2 class="section-title">Componentes Clave del Estándar</h2>
+            </div>
+            
+            <p class="section-description">
+                IEEE 730 se estructura en torno a varios componentes fundamentales que trabajan de manera 
+                integrada para garantizar la calidad del software. Cada componente juega un rol crítico en 
+                el proceso de aseguramiento de calidad y debe ser implementado de manera sistemática.
+            </p>
+
+            <div class="table-wrapper">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Descripción</th>
+                            <th>Importancia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Plan de SQA</strong></td>
+                            <td>Documento maestro que describe cómo se implementará el aseguramiento de calidad</td>
+                            <td>Define la estrategia completa de calidad del proyecto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Procesos de SQA</strong></td>
+                            <td>Conjunto de actividades sistemáticas para asegurar la calidad</td>
+                            <td>Establece las actividades específicas a realizar</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Documentación</strong></td>
+                            <td>Registros, reportes y documentos que evidencian las actividades de SQA</td>
+                            <td>Proporciona trazabilidad y evidencia objetiva</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estándares y Prácticas</strong></td>
+                            <td>Normas técnicas y mejores prácticas aplicables al proyecto</td>
+                            <td>Asegura conformidad con requisitos técnicos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revisiones y Auditorías</strong></td>
+                            <td>Evaluaciones periódicas de productos y procesos</td>
+                            <td>Identifica desviaciones y oportunidades de mejora</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medición y Métricas</strong></td>
+                            <td>Sistema de indicadores para monitorear la calidad</td>
+                            <td>Permite tomar decisiones basadas en datos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PROCESOS PRINCIPALES -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 3</span>
+                <h2 class="section-title">Procesos Principales de SQA</h2>
+            </div>
+            
+            <p class="section-description">
+                IEEE 730 define seis procesos principales de aseguramiento de calidad que deben ser implementados 
+                a lo largo del ciclo de vida del software. Cada proceso tiene objetivos específicos, actividades 
+                definidas y entregables esperados que contribuyen al aseguramiento integral de la calidad.
+            </p>
+
+            <div class="processes-grid">
+                <div class="process-card">
+                    <div class="process-icon">📋</div>
+                    <h3 class="process-title">1. Planificación de SQA</h3>
+                    <p class="process-description">
+                        Desarrollo del Plan de Aseguramiento de Calidad de Software que define el enfoque, 
+                        recursos, responsabilidades, actividades y cronograma para implementar SQA. Este 
+                        proceso establece la base para todas las actividades de calidad posteriores.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">🔍</div>
+                    <h3 class="process-title">2. Revisión de Productos</h3>
+                    <p class="process-description">
+                        Evaluación sistemática de productos de trabajo del software para verificar conformidad 
+                        con requisitos, estándares y procedimientos. Incluye revisiones técnicas, inspecciones 
+                        de código y validaciones de diseño para detectar defectos tempranamente.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">🔄</div>
+                    <h3 class="process-title">3. Auditorías de Procesos</h3>
+                    <p class="process-description">
+                        Evaluación independiente de procesos de software para determinar cumplimiento con 
+                        estándares, procedimientos y planes establecidos. Las auditorías verifican que los 
+                        procesos definidos se estén ejecutando correctamente.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">📊</div>
+                    <h3 class="process-title">4. Medición y Análisis</h3>
+                    <p class="process-description">
+                        Recolección, análisis y reporte de métricas de calidad del software. Este proceso 
+                        proporciona datos objetivos sobre el estado de la calidad, tendencias y áreas que 
+                        requieren atención o mejora continua.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">⚠️</div>
+                    <h3 class="process-title">5. Gestión de No Conformidades</h3>
+                    <p class="process-description">
+                        Identificación, documentación, análisis y resolución de desviaciones respecto a 
+                        requisitos, estándares o procedimientos. Incluye el seguimiento de acciones 
+                        correctivas hasta su cierre efectivo.
+                    </p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">📈</div>
+                    <h3 class="process-title">6. Reportes de SQA</h3>
+                    <p class="process-description">
+                        Comunicación periódica del estado de la calidad a stakeholders relevantes. Los 
+                        reportes incluyen resultados de revisiones, auditorías, métricas, problemas 
+                        identificados y recomendaciones para mejora.
+                    </p>
+                </div>
+            </div>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Interrelación de Procesos</h3>
+                <p class="definition-text">
+                    Estos seis procesos no operan de manera aislada, sino que están interrelacionados y se 
+                    retroalimentan mutuamente. Por ejemplo, las métricas recolectadas en el proceso de 
+                    Medición y Análisis informan las revisiones de productos y auditorías de procesos. 
+                    Las no conformidades detectadas en auditorías generan acciones correctivas que se 
+                    rastrean en el proceso de Gestión de No Conformidades. Esta integración crea un 
+                    sistema cohesivo de aseguramiento de calidad que mejora continuamente.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: PLAN DE SQA -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 4</span>
+                <h2 class="section-title">Plan de Aseguramiento de Calidad de Software</h2>
+            </div>
+            
+            <p class="section-description">
+                El Plan de SQA es el documento central que define cómo se implementará el aseguramiento de 
+                calidad en un proyecto específico. IEEE 730 establece el contenido mínimo requerido para 
+                este plan, asegurando que todos los aspectos críticos de la calidad sean abordados de 
+                manera sistemática y documentada.
+            </p>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Contenido Mínimo del Plan de SQA</h3>
+                <p class="definition-text">
+                    Según IEEE 730, el Plan de SQA debe incluir los siguientes elementos mínimos:
+                </p>
+            </div>
+
+            <ol class="implementation-steps">
+                <li>
+                    <strong>Propósito:</strong> Define el objetivo del plan y su alcance, identificando 
+                    los productos de software cubiertos y las exclusiones específicas.
+                </li>
+                <li>
+                    <strong>Productos de Referencia:</strong> Lista de documentos aplicables como 
+                    estándares, procedimientos, políticas de calidad y otros planes relacionados.
+                </li>
+                <li>
+                    <strong>Administración:</strong> Define la estructura organizacional de SQA, 
+                    incluyendo roles, responsabilidades, autoridad y líneas de reporte.
+                </li>
+                <li>
+                    <strong>Documentación:</strong> Especifica qué documentos serán producidos, 
+                    cuándo, cómo serán revisados y aprobados, y dónde serán almacenados.
+                </li>
+                <li>
+                    <strong>Estándares y Prácticas:</strong> Identifica los estándares técnicos, 
+                    convenciones de codificación, prácticas de diseño y otros criterios aplicables.
+                </li>
+                <li>
+                    <strong>Revisiones y Auditorías:</strong> Define qué revisiones técnicas y 
+                    auditorías se realizarán, cuándo, quién las conducirá y cómo se documentarán.
+                </li>
+                <li>
+                    <strong>Pruebas:</strong> Describe el enfoque de pruebas, tipos de pruebas, 
+                    criterios de aceptación y responsabilidades para actividades de testing.
+                </li>
+                <li>
+                    <strong>Gestión de Problemas:</strong> Define cómo se identificarán, documentarán, 
+                    analizarán, resolverán y rastrearán los problemas de calidad.
+                </li>
+                <li>
+                    <strong>Herramientas y Tecnologías:</strong> Especifica herramientas de software, 
+                    técnicas y metodologías que se utilizarán para SQA.
+                </li>
+                <li>
+                    <strong>Gestión de Código:</strong> Define controles para el código fuente, 
+                    incluyendo versionamiento, control de cambios y gestión de configuración.
+                </li>
+                <li>
+                    <strong>Gestión de Medios:</strong> Especifica cómo se controlarán y protegerán 
+                    los medios de almacenamiento que contienen productos de software.
+                </li>
+                <li>
+                    <strong>Gestión de Proveedores:</strong> Define cómo se asegurará la calidad de 
+                    componentes, servicios o productos adquiridos de terceros.
+                </li>
+                <li>
+                    <strong>Recolección y Mantenimiento de Registros:</strong> Especifica qué registros 
+                    se mantendrán, por cuánto tiempo y cómo se almacenarán y protegerán.
+                </li>
+                <li>
+                    <strong>Capacitación:</strong> Define necesidades de entrenamiento para el personal 
+                    de SQA y desarrollo respecto a prácticas y procedimientos de calidad.
+                </li>
+                <li>
+                    <strong>Gestión de Riesgos:</strong> Identifica riesgos relacionados con la calidad 
+                    y define estrategias de mitigación y planes de contingencia.
+                </li>
+            </ol>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">💡 Nota Importante</div>
+                <p>El Plan de SQA es un documento vivo que debe ser actualizado a lo largo del ciclo de 
+                vida del proyecto a medida que cambien los requisitos, el alcance o las circunstancias del 
+                proyecto. Cada actualización debe ser revisada y aprobada por las partes interesadas relevantes.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: IMPLEMENTACIÓN -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 5</span>
+                <h2 class="section-title">Implementación de IEEE 730</h2>
+            </div>
+            
+            <p class="section-description">
+                La implementación exitosa de IEEE 730 requiere un enfoque sistemático y adaptado a las 
+                características específicas de cada organización y proyecto. No existe una implementación 
+                "talla única", sino que el estándar debe ser adaptado considerando factores como el tamaño 
+                del proyecto, criticidad del sistema, recursos disponibles, cultura organizacional y 
+                metodología de desarrollo utilizada.
+            </p>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Consideraciones para la Adaptación</h3>
+                <p class="definition-text">
+                    <strong>Criticidad del Software:</strong> Sistemas críticos para la seguridad requieren 
+                    mayor rigor en SQA que aplicaciones de bajo riesgo.<br><br>
+                    <strong>Tamaño del Proyecto:</strong> Proyectos grandes necesitan más formalidad y 
+                    documentación que proyectos pequeños.<br><br>
+                    <strong>Metodología de Desarrollo:</strong> Implementaciones ágiles pueden requerir 
+                    enfoques de SQA más iterativos e incrementales.<br><br>
+                    <strong>Madurez Organizacional:</strong> Organizaciones maduras pueden tener procesos 
+                    existentes que facilitan la adopción del estándar.<br><br>
+                    <strong>Restricciones Presupuestarias:</strong> Los recursos disponibles influyen en el 
+                    nivel de detalle y formalidad de las actividades de SQA.
+                </p>
+            </div>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Pasos para la Implementación</h3>
+                <ol class="implementation-steps">
+                    <li>
+                        <strong>Evaluación Inicial:</strong> Analizar el estado actual de prácticas de 
+                        calidad, identificar gaps respecto a IEEE 730 y definir el nivel de conformidad 
+                        objetivo basado en las necesidades del proyecto.
+                    </li>
+                    <li>
+                        <strong>Planificación:</strong> Desarrollar una estrategia de implementación, 
+                        definir cronograma, asignar recursos y obtener compromiso de la dirección y 
+                        stakeholders clave.
+                    </li>
+                    <li>
+                        <strong>Desarrollo del Plan de SQA:</strong> Crear el Plan de SQA específico del 
+                        proyecto, adaptando el contenido del estándar a las necesidades particulares 
+                        identificadas.
+                    </li>
+                    <li>
+                        <strong>Establecimiento de Procesos:</strong> Definir e institucionalizar los 
+                        procesos de SQA requeridos, incluyendo procedimientos, templates y herramientas.
+                    </li>
+                    <li>
+                        <strong>Capacitación:</strong> Entrenar al personal en los requisitos del estándar, 
+                        los procesos de SQA establecidos y sus roles y responsabilidades.
+                    </li>
+                    <li>
+                        <strong>Implementación Piloto:</strong> Ejecutar una implementación piloto en un 
+                        proyecto o área limitada para validar el enfoque y realizar ajustes.
+                    </li>
+                    <li>
+                        <strong>Despliegue Completo:</strong> Extender la implementación a todos los 
+                        proyectos y áreas aplicables de la organización.
+                    </li>
+                    <li>
+                        <strong>Monitoreo y Mejora:</strong> Establecer métricas para evaluar la efectividad 
+                        de SQA, revisar periódicamente y realizar mejoras continuas basadas en lecciones 
+                        aprendidas.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: BENEFICIOS -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 6</span>
+                <h2 class="section-title">Beneficios de Implementar IEEE 730</h2>
+            </div>
+            
+            <p class="section-description">
+                La implementación de IEEE 730 proporciona numerosos beneficios tangibles e intangibles para 
+                organizaciones que desarrollan software. Estos beneficios se extienden más allá de la simple 
+                conformidad con un estándar, impactando positivamente en la calidad del producto, eficiencia 
+                operativa, satisfacción del cliente y competitividad en el mercado.
+            </p>
+
+            <ul class="benefits-list">
+                <li>
+                    <strong>Mejora de la Calidad del Producto:</strong> Las actividades sistemáticas de SQA 
+                    detectan y previenen defectos tempranamente, resultando en software más confiable, robusto 
+                    y que cumple mejor con los requisitos del usuario.
+                </li>
+                <li>
+                    <strong>Reducción de Costos:</strong> Detectar defectos temprano en el ciclo de desarrollo 
+                    es significativamente más económico que corregirlos en producción. IEEE 730 facilita la 
+                    detección temprana, reduciendo costos de corrección y retrabajo.
+                </li>
+                <li>
+                    <strong>Gestión de Riesgos:</strong> Las actividades de SQA identifican riesgos de calidad 
+                    tempranamente, permitiendo implementar estrategias de mitigación antes de que se conviertan 
+                    en problemas mayores.
+                </li>
+                <li>
+                    <strong>Mejora de Procesos:</strong> Las auditorías y revisiones de procesos identifican 
+                    ineficiencias y oportunidades de mejora, llevando a procesos de desarrollo más efectivos 
+                    y eficientes.
+                </li>
+                <li>
+                    <strong>Trazabilidad y Visibilidad:</strong> La documentación requerida por IEEE 730 
+                    proporciona trazabilidad completa desde requisitos hasta implementación, facilitando 
+                    auditorías, mantenimiento y resolución de problemas.
+                </li>
+                <li>
+                    <strong>Satisfacción del Cliente:</strong> Software de mayor calidad y más confiable 
+                    resulta en clientes más satisfechos, menos reclamos y mejor reputación en el mercado.
+                </li>
+                <li>
+                    <strong>Conformidad Regulatoria:</strong> En industrias reguladas (aeroespacial, médica, 
+                    financiera), IEEE 730 facilita el cumplimiento de requisitos regulatorios relacionados 
+                    con calidad de software.
+                </li>
+                <li>
+                    <strong>Competitividad:</strong> Organizaciones que demuestran conformidad con estándares 
+                    internacionales como IEEE 730 ganan ventaja competitiva en licitaciones y contratos que 
+                    requieren certificaciones de calidad.
+                </li>
+                <li>
+                    <strong>Cultura de Calidad:</strong> La implementación de IEEE 730 fomenta una cultura 
+                    organizacional orientada a la calidad, donde todos los miembros del equipo asumen 
+                    responsabilidad por la calidad del producto.
+                </li>
+                <li>
+                    <strong>Toma de Decisiones Informada:</strong> Las métricas y reportes de SQA proporcionan 
+                    datos objetivos que permiten a la gerencia tomar decisiones informadas sobre el proyecto, 
+                    recursos y prioridades.
+                </li>
+                <li>
+                    <strong>Mantenibilidad Mejorada:</strong> Software desarrollado bajo prácticas de SQA 
+                    rigurosas es generalmente más fácil de mantener, modificar y evolucionar a lo largo de 
+                    su vida útil.
+                </li>
+                <li>
+                    <strong>Productividad del Equipo:</strong> Aunque inicialmente puede parecer que SQA 
+                    agrega overhead, a largo plazo mejora la productividad al reducir retrabajo y permitir 
+                    que el equipo se enfoque en desarrollo de nuevas funcionalidades.
+                </li>
+            </ul>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">📊 Evidencia Empírica</div>
+                <p>Estudios de la industria han demostrado que organizaciones que implementan prácticas de 
+                SQA conformes con estándares como IEEE 730 experimentan reducciones de hasta 85% en defectos 
+                post-liberación, 40% en tiempo de desarrollo y 50% en costos de mantenimiento a largo plazo. 
+                El retorno de inversión típico se observa dentro de 18-24 meses de implementación.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7: INTEGRACIÓN CON PROYECTO HACHIKO -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 7</span>
+                <h2 class="section-title">Aplicación de IEEE 730 en Proyecto Hachiko</h2>
+            </div>
+            
+            <p class="section-description">
+                El proyecto Hachiko, como sistema de monitoreo emocional canino con componentes de hardware 
+                (collares inteligentes), software móvil, backend, machine learning e IoT, representa un caso 
+                ideal para aplicar IEEE 730. La criticidad del sistema (relacionada con el bienestar animal), 
+                la complejidad tecnológica y la necesidad de confiabilidad hacen imperativo un aseguramiento 
+                de calidad riguroso.
+            </p>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Plan de SQA Específico para Hachiko</h3>
+                <p class="definition-text">
+                    <strong>Alcance:</strong> El Plan de SQA cubre todos los componentes del sistema Hachiko: 
+                    firmware del collar, aplicación móvil (Android/iOS), backend API, modelos de ML, 
+                    infraestructura cloud y documentación asociada.<br><br>
+                    
+                    <strong>Estándares Aplicables:</strong> Además de IEEE 730, se integran IEEE 829 (Testing), 
+                    ISO/IEC 25010 (Calidad de Software), IEC 62304 (Software de Dispositivos Médicos - adaptado 
+                    para dispositivos veterinarios) y mejores prácticas de MLOps.<br><br>
+                    
+                    <strong>Organización de SQA:</strong> Se establece un equipo de SQA independiente del 
+                    desarrollo, reportando directamente a la dirección del proyecto, con autoridad para 
+                    detener releases que no cumplan criterios de calidad.<br><br>
+                    
+                    <strong>Actividades Clave:</strong>
+                </p>
+                <ul class="benefits-list">
+                    <li>Revisiones de diseño arquitectónico para componentes backend y ML</li>
+                    <li>Inspecciones de código con herramientas automatizadas (SonarQube, ESLint)</li>
+                    <li>Pruebas de integración de sensores del collar con firmware</li>
+                    <li>Validación de modelos de ML con datasets de prueba independientes</li>
+                    <li>Pruebas de seguridad (penetration testing) del backend y API</li>
+                    <li>Pruebas de usabilidad con usuarios reales (dueños de mascotas)</li>
+                    <li>Auditorías de cumplimiento con regulaciones de privacidad de datos</li>
+                    <li>Análisis de métricas de calidad: cobertura de código, densidad de defectos, tiempo medio entre fallos</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">🎯 Métricas de Calidad para Hachiko</div>
+                <p><strong>Objetivo de Defectos:</strong> Máximo 1 defecto crítico por cada 10,000 líneas de código<br>
+                <strong>Cobertura de Pruebas:</strong> Mínimo 85% para código crítico (firmware, ML)<br>
+                <strong>Disponibilidad:</strong> 99.9% para servicios backend<br>
+                <strong>Precisión de ML:</strong> Mínimo 90% en detección de estados emocionales<br>
+                <strong>Tiempo de Respuesta API:</strong> < 200ms para el 95% de las solicitudes<br>
+                <strong>Autonomía de Batería:</strong> Mínimo 5 días con uso normal del collar</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN QUIZ INTERACTIVO -->
+        <div class="quiz-section">
+            <div class="quiz-content">
+                <div class="quiz-icon">🎓</div>
+                <h2 class="quiz-title">¡Pon a Prueba tus Conocimientos!</h2>
+                <p class="quiz-description">
+                    ¿Has entendido los conceptos fundamentales de IEEE 730? Participa en nuestro quiz 
+                    interactivo y evalúa tu comprensión del estándar de aseguramiento de calidad de software. 
+                    El quiz incluye preguntas sobre procesos, documentación, implementación y mejores prácticas.
+                </p>
+                <a href="https://claude.ai/public/artifacts/05f64d65-dd43-4fca-a77d-dc566159d460" 
+                   target="_blank" 
+                   class="quiz-button">
+                    <span>🚀 Iniciar Quiz Interactivo</span>
+                </a>
+                <p style="margin-top: 20px; font-size: 0.95rem; opacity: 0.9;">
+                    ⏱️ Duración estimada: 10-15 minutos | 📊 15 preguntas | 🏆 Obtén tu calificación al instante
+                </p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 8: RECURSOS ADICIONALES -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-number">SECCIÓN 8</span>
+                <h2 class="section-title">Recursos y Referencias</h2>
+            </div>
+            
+            <div class="definition-section">
+                <h3 class="definition-title">Documentos Oficiales</h3>
+                <ul class="benefits-list">
+                    <li>IEEE Std 730-2014: IEEE Standard for Software Quality Assurance Processes</li>
+                    <li>ISO/IEC/IEEE 12207: Systems and software engineering - Software life cycle processes</li>
+                    <li>ISO/IEC/IEEE 15288: Systems and software engineering - System life cycle processes</li>
+                    <li>IEEE Std 829-2008: IEEE Standard for Software and System Test Documentation</li>
+                </ul>
+            </div>
+
+            <div class="definition-section">
+                <h3 class="definition-title">Mejores Prácticas Complementarias</h3>
+                <ul class="benefits-list">
+                    <li>CMMI (Capability Maturity Model Integration) para mejora de procesos</li>
+                    <li>ISO 9001 para sistemas de gestión de calidad organizacionales</li>
+                    <li>Six Sigma y Lean para optimización de procesos de calidad</li>
+                    <li>Agile Quality Assurance para integración con metodologías ágiles</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">📚 Lecturas Recomendadas</div>
+                <p><strong>Libros:</strong><br>
+                • "Software Quality Assurance: A Practical Approach" - Daniel Galin<br>
+                • "Software Quality Engineering: Testing, Quality Assurance, and Quantifiable Improvement" - Jeff Tian<br>
+                • "Managing the Testing Process" - Rex Black<br><br>
+                <strong>Artículos Académicos:</strong> Búsquedas en IEEE Xplore, ACM Digital Library sobre 
+                "software quality assurance", "IEEE 730 implementation", "SQA best practices"</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h3>Proyecto Hachiko</h3>
+            <p>Sistema de Análisis y Monitoreo Canino</p>
+            <p style="font-size: 1rem; opacity: 0.9; margin-top: 15px;">
+                Implementando estándares de calidad internacional IEEE 730
+            </p>
+            <p style="margin-top: 20px; font-size: 0.9rem; font-style: italic;">
+                Fuente: IEEE Std 730-2014 - IEEE Standard for Software Quality Assurance Processes
+            </p>
+        </div>
+    </div>
+</body>
+</html>

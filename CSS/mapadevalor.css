@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    min-height: 100vh;
+}
+
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #13ac02 0%, #0d7d01 100%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    z-index: 1003;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main_menu {
+    position: fixed;
+    top: 54px;
+    right: 0;
+    left: 0;
+    z-index: 1002;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main_menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 18px 25px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.main_menu a:hover {
+    background: linear-gradient(135deg, #13ac02 0%, #0d7d01 100%);
+    border-bottom: 3px solid #fff;
+    transform: translateY(-2px);
+}
+
+main {
+    background: rgb(203, 249, 207);
+    margin-top: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+    min-height: calc(100vh - 160px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.introduccion {
+    text-align: center;
+}
+
+.introduccion h1 {
+    font-size: 42px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.introduccion h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #13ac02 0%, #0d7d01 100%);
+    border-radius: 2px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    cursor: pointer;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.image-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+    background: white;
+}
+
+.image-card:hover img {
+    transform: scale(1.02);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover .image-label {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 30px 20px;
+    }
+    
+    .introduccion h1 {
+        font-size: 32px;
+    }
+
+    .image-gallery {
+        gap: 20px;
+    }
+
+    .image-card img {
+        height: 300px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.introduccion, .image-card {
+    animation: fadeInUp 0.8s ease;
+}
+
+.image-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.image-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.image-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.image-card:nth-child(4) {
+    animation-delay: 0.4s;
+}

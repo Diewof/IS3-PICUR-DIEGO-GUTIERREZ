@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos de Usuario</title>
+    <link rel="stylesheet" href="../CSS/Requisitos.css">
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de ingeniería de software</p>
+    </div>
+
+    <nav class="main_menu">
+        <div><a href="./index.html">Inicio</a></div>
+    </nav>
+
+    <!-- Contenido -->
+    <div class="container">
+
+        <h2 class="section-title">Requisitos de Usuario</h2>
+        <p class="section-subtitle">
+            Los requisitos que describen las diferentes acciones que el usuario puede ejecutar sobre el sistema.
+        </p>
+
+        <!-- ================== Definición ================== -->
+        <div class="definition-section">
+            <h3 class="definition-title">Definición de Requisitos de Usuario</h3>
+            <p class="definition-text">
+                Según Metaute (2016), el Requisito de Usuario (RU) se relaciona directamente con la necesidad del cliente 
+                en relación a la automatización del grupo de datos, donde dicha necesidad es traducida al requisito del sistema. 
+                El RU describe las diferentes acciones que el usuario puede ejecutar sobre el sistema. Como se puede observar, 
+                cada herramienta que se aplica sigue evolucionando y clarificando la necesidad del cliente, de manera que pase 
+                hacia otros procesos el requisito concreto.
+            </p>
+        </div>
+
+        <!-- ================== Gestión de Información Básica ================== -->
+        <div id="gestion-basica" class="definition-section">
+            <h3 class="definition-title">Gestión de Información Básica</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-001</span></td>
+                            <td>Gestión de propietario</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>propietarios</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-002</span></td>
+                            <td>Gestión de residencia</td>
+                            <td>El sistema permitirá la gestión de la información de la <strong>residencia</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-003</span></td>
+                            <td>Gestión de perro</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>perros</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-004</span></td>
+                            <td>Gestión de raza</td>
+                            <td>El sistema permitirá la gestión de la información de la <strong>raza</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Formularios y Encuestas ================== -->
+        <div id="gestion-formularios" class="definition-section">
+            <h3 class="definition-title">Gestión de Formularios y Encuestas</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-005</span></td>
+                            <td>Gestión de formulario</td>
+                            <td>El sistema permitirá la gestión de la información del <strong>formulario</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-006</span></td>
+                            <td>Gestión de encuesta de conducta</td>
+                            <td>El sistema permitirá la gestión de la información de las <strong>encuestas</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador, Propietario</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-017</span></td>
+                            <td>Gestión de aplicación de encuesta</td>
+                            <td>El sistema permitirá la gestión de la información de la <strong>Gestión de aplicación de encuesta</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Sensores ================== -->
+        <div id="gestion-sensores" class="definition-section">
+            <h3 class="definition-title">Gestión de Sensores</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-007</span></td>
+                            <td>Gestión tipo de sensores</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>sensores</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-008</span></td>
+                            <td>Gestión sensor térmico</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>sensores térmicos</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-009</span></td>
+                            <td>Gestión sensor sonoro</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>sensores sonoros</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-010</span></td>
+                            <td>Gestión sensor movimiento</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>sensores de movimiento</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-011</span></td>
+                            <td>Gestión resultado sensores</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>resultados de sensores</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Adiestramiento ================== -->
+        <div id="gestion-adiestramiento" class="definition-section">
+            <h3 class="definition-title">Gestión de Adiestramiento</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-012</span></td>
+                            <td>Gestión tipo adiestramiento</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>tipos de adiestramiento</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-013</span></td>
+                            <td>Gestión adiestramiento</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>adiestramientos</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-014</span></td>
+                            <td>Gestión horario</td>
+                            <td>El sistema permitirá la gestión de la información de los <strong>horarios</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-016</span></td>
+                            <td>Gestión de adiestramiento y solución de problemas de conducta</td>
+                            <td>El sistema permitirá la gestión de la información de la <strong>Gestión de adiestramiento y solución de problemas de conductas</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Detección de Emociones ================== -->
+        <div id="gestion-emociones" class="definition-section">
+            <h3 class="definition-title">Gestión de Detección de Emociones</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-015</span></td>
+                            <td>Gestión de detección de emociones</td>
+                            <td>El sistema permitirá la <strong>gestión de la información de la Gestión de detección de emociones</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Informes y Consultas ================== -->
+        <div id="gestion-informes" class="definition-section">
+            <h3 class="definition-title">Gestión de Informes y Consultas</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-018</span></td>
+                            <td>Gestión de informes</td>
+                            <td>El sistema permitirá la Ejecución de los informes diarios del <strong>historial de las emociones del perro, problemas de conducta probables detectados, y el informe de alertas por emociones críticas histórico semanal</strong></td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-019</span></td>
+                            <td>Gestión de Consultas</td>
+                            <td>El sistema permitirá la ejecución de las Consultas de <strong>estado emocional actual, lecciones de adiestramiento sugeridas y del mapeo de la casa.</strong></td>
+                            <td>Propietario, Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================== Gestión de Sistema ================== -->
+        <div id="gestion-sistema" class="definition-section">
+            <h3 class="definition-title">Gestión de Sistema</h3>
+            <div class="table-wrapper">
+                <table class="business-rules-table">
+                    <thead>
+                        <tr>
+                            <th>ID Requisito</th>
+                            <th>Nombre del Requisito</th>
+                            <th>Descripción del Requisito</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rule-id">RU-020</span></td>
+                            <td>Gestión de perfil</td>
+                            <td>El sistema permitirá la gestión de la información del <strong>perfil</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rule-id">RU-021</span></td>
+                            <td>Gestión de usuario</td>
+                            <td>El sistema permitirá la gestión de la información del <strong>usuario</strong> para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+                            <td>Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
