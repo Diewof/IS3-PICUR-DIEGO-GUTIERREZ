@@ -1,0 +1,93 @@
+# Estudiante 1: Análisis y Requisitos
+
+**Responsable de:**
+
+- Introducción  
+- Justificación del Proyecto  
+- Definición del Problema  
+- Antecedentes y Estado del Arte  
+- Objetivo General y Específicos  
+- Alcance del Sistema  
+- Requisitos  
+  - Requisitos de Usuario  
+  - Requisitos Funcionales  
+  - Requisitos No Funcionales (RNF)  
+  - Historias de Usuario  
+  - Reglas del Negocio  
+
+**Colaboración:**  
+Debe coordinarse con el **Estudiante 2** para asegurar que los requisitos estén correctamente reflejados en los modelos y diagramas, y con el **Estudiante 3** para que los criterios de calidad y pruebas sean coherentes con los requisitos definidos.
+
+---
+
+# Estudiante 2: Modelado y Diseño
+
+**Responsable de:**
+
+- Modelado del Sistema  
+  - Diagrama de Casos de Uso  
+  - Escenarios de Casos de Uso  
+  - Diagrama de Clases  
+  - MER (Modelo Entidad-Relación)  
+  - Diccionario de Diagrama de Clases  
+  - Mapa de Navegación  
+
+- Diseño del Sistema  
+  - Diseño de Interfaces / Prototipo de alta calidad  
+  - Recursos del Proyecto  
+
+- Gestión de Configuración de Software  
+- Gestión del Cambio  
+
+**Colaboración:**  
+Debe trabajar con el **Estudiante 1** para validar que el modelado responde a los requisitos y con el **Estudiante 3** para asegurar que el diseño facilite la implementación de métricas, pruebas y estándares de calidad.
+
+---
+
+# Estudiante 3: Calidad, Pruebas y Gestión
+
+**Responsable de:**
+
+- Métricas de Software y Valoración del Proyecto  
+- Cronograma de Actividades  
+- Análisis de Riesgos  
+  - Riesgo Tecnológico  
+  - Riesgo de Clientes  
+  - Riesgo de Producto  
+  - Riesgos de Proceso  
+
+- Estándares y Modelos de Calidad de Software  
+  - ISO/IEC 25010  
+  - ISO/IEC 12207  
+  - ISO/IEC 90003  
+  - CMMI-DEV  
+  - SPICE  
+  - IEEE 730  
+  - Six Sigma  
+  - FURPS  
+  - ITIL  
+  - COBIT  
+  - ISO 9001  
+  - IEEE 1016 (documentación de diseño)  
+  - SWEBOK (cuerpo de conocimiento)  
+
+- Estándares y Modelos para Pruebas de Software  
+  - IEEE 829 / ISO/IEC/IEEE 29119-3  
+  - ISO/IEC/IEEE 29119  
+
+- Tipos de Pruebas de Software  
+  - Según el objetivo o propósito  
+  - Según el nivel de prueba  
+  - Según el acceso al código  
+
+**Colaboración:**  
+Debe coordinarse con el **Estudiante 1** para que los criterios de calidad y pruebas estén alineados con los requisitos, y con el **Estudiante 2** para que el diseño y modelado permitan la implementación efectiva de métricas y pruebas.
+
+---
+
+# C. Principios Fundamentales
+
+- Modularidad  
+- Abstracción  
+- Encapsulamiento  
+- Separación de intereses

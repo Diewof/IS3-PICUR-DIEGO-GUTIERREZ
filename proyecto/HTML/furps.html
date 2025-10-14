@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo FURPS - Proyecto de Ingeniería de Software</title>
+    <link rel="stylesheet" href="../CSS/furps.css">
+</head>
+<body>
+    <div class="top-header">
+        <p>Proyecto de ingeniería de software</p>
+    </div>
+
+    <nav class="main_menu">
+        <div><a href="./index.html">Inicio</a></div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Modelo FURPS</h1>
+        <p class="section-subtitle">Framework para la Especificación de Requisitos No Funcionales</p>
+        
+        <div class="definition-section">
+            <h2 class="definition-title">¿Qué es FURPS?</h2>
+            <p class="definition-text">
+                FURPS es un acrónimo que representa un modelo para la clasificación de requisitos de software, 
+                desarrollado por Robert Grady en Hewlett-Packard. Este framework se utiliza para categorizar 
+                los requisitos no funcionales de un sistema, proporcionando una estructura sistemática para 
+                evaluar la calidad del software. FURPS significa <strong>Functionality</strong> (Funcionalidad), 
+                <strong>Usability</strong> (Usabilidad), <strong>Reliability</strong> (Confiabilidad), 
+                <strong>Performance</strong> (Rendimiento) y <strong>Supportability</strong> (Soporte).
+            </p>
+        </div>
+
+        <div class="furps-grid">
+            <!-- FUNCTIONALITY -->
+            <div class="furps-card functionality">
+                <div class="card-header">
+                    <h3 class="card-title">F - Functionality</h3>
+                    <div class="card-subtitle">Funcionalidad</div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">
+                        Se refiere a las características funcionales y capacidades del sistema, 
+                        incluyendo el conjunto de funciones y la adecuación de estas funciones.
+                    </p>
+                    <div class="examples-section">
+                        <h4>Ejemplos:</h4>
+                        <ul>
+                            <li>Autenticación y autorización de usuarios</li>
+                            <li>Integración con APIs externas</li>
+                            <li>Procesamiento de transacciones</li>
+                            <li>Generación de reportes</li>
+                            <li>Gestión de datos y almacenamiento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USABILITY -->
+            <div class="furps-card usability">
+                <div class="card-header">
+                    <h3 class="card-title">U - Usability</h3>
+                    <div class="card-subtitle">Usabilidad</div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">
+                        Evalúa qué tan fácil es para los usuarios aprender, usar y obtener ayuda del sistema.
+                        Incluye aspectos de la experiencia del usuario y la interfaz.
+                    </p>
+                    <div class="examples-section">
+                        <h4>Ejemplos:</h4>
+                        <ul>
+                            <li>Interfaz intuitiva y fácil de navegar</li>
+                            <li>Tiempo de aprendizaje del sistema</li>
+                            <li>Accesibilidad para usuarios con discapacidades</li>
+                            <li>Ayuda contextual y documentación</li>
+                            <li>Consistencia en el diseño de la interfaz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELIABILITY -->
+            <div class="furps-card reliability">
+                <div class="card-header">
+                    <h3 class="card-title">R - Reliability</h3>
+                    <div class="card-subtitle">Confiabilidad</div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">
+                        Capacidad del sistema para mantener su nivel de rendimiento bajo condiciones 
+                        establecidas durante un período determinado.
+                    </p>
+                    <div class="examples-section">
+                        <h4>Ejemplos:</h4>
+                        <ul>
+                            <li>Disponibilidad del sistema (99.9% uptime)</li>
+                            <li>Frecuencia de fallas y recuperación</li>
+                            <li>Tolerancia a fallos y redundancia</li>
+                            <li>Backup y recuperación de datos</li>
+                            <li>Manejo de errores y excepciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PERFORMANCE -->
+            <div class="furps-card performance">
+                <div class="card-header">
+                    <h3 class="card-title">P - Performance</h3>
+                    <div class="card-subtitle">Rendimiento</div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">
+                        Se refiere a la velocidad, eficiencia y capacidad de respuesta del sistema 
+                        bajo diferentes cargas de trabajo.
+                    </p>
+                    <div class="examples-section">
+                        <h4>Ejemplos:</h4>
+                        <ul>
+                            <li>Tiempo de respuesta (< 2 segundos)</li>
+                            <li>Throughput (transacciones por segundo)</li>
+                            <li>Uso de recursos (CPU, memoria)</li>
+                            <li>Escalabilidad y capacidad de carga</li>
+                            <li>Optimización de consultas de base de datos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUPPORTABILITY -->
+            <div class="furps-card supportability">
+                <div class="card-header">
+                    <h3 class="card-title">S - Supportability</h3>
+                    <div class="card-subtitle">Soporte</div>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">
+                        Facilidad con la que el sistema puede ser mantenido, configurado, 
+                        instalado y soportado por el equipo técnico.
+                    </p>
+                    <div class="examples-section">
+                        <h4>Ejemplos:</h4>
+                        <ul>
+                            <li>Facilidad de instalación y configuración</li>
+                            <li>Capacidad de monitoreo y logging</li>
+                            <li>Documentación técnica completa</li>
+                            <li>Modularidad y mantenibilidad del código</li>
+                            <li>Compatibilidad con diferentes plataformas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del Video -->
+        <div class="video-section">
+            <h2 class="section-title">FURPS en la Práctica</h2>
+            <p class="video-description">
+                El siguiente video demuestra la aplicación práctica del modelo FURPS en el análisis 
+                de una aplicación web existente, mostrando cómo evaluar cada uno de los componentes 
+                del framework en un caso real.
+            </p>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/TUTivpPSqAc" 
+                        title="Aplicación del Modelo FURPS en Web Existente"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Contenido del Video:</h3>
+                    <ul>
+                        <li>Análisis de funcionalidad en aplicaciones web</li>
+                        <li>Evaluación de usabilidad y experiencia de usuario</li>
+                        <li>Medición de confiabilidad y disponibilidad</li>
+                        <li>Pruebas de rendimiento y optimización</li>
+                        <li>Aspectos de soporte y mantenibilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aplicación al Proyecto -->
+        <div class="application-section">
+            <h2 class="definition-title">Aplicación de FURPS en Nuestro Proyecto</h2>
+            <div class="project-furps">
+                <div class="project-item">
+                    <h4><span class="furps-letter">F</span>Funcionalidad</h4>
+                    <p>Detección de emociones caninas, análisis de comportamiento, generación de reportes</p>
+                </div>
+                <div class="project-item">
+                    <h4><span class="furps-letter">U</span>Usabilidad</h4>
+                    <p>Interfaz intuitiva para propietarios, navegación simple, visualización clara de datos</p>
+                </div>
+                <div class="project-item">
+                    <h4><span class="furps-letter">R</span>Confiabilidad</h4>
+                    <p>Disponibilidad 24/7, precisión en la detección, recuperación ante fallos</p>
+                </div>
+                <div class="project-item">
+                    <h4><span class="furps-letter">P</span>Rendimiento</h4>
+                    <p>Respuesta en tiempo real, procesamiento eficiente de datos de sensores</p>
+                </div>
+                <div class="project-item">
+                    <h4><span class="furps-letter">S</span>Soporte</h4>
+                    <p>Actualizaciones automáticas, documentación completa, compatibilidad multiplataforma</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; color: rgb(44, 44, 43); font-style: italic;">
+            <strong>Fuente:</strong> Grady, R. B. (1992). Practical Software Metrics for Project Management and Process Improvement
+        </div>
+    </div>
+</body>
+</html>
